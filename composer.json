@@ -1,0 +1,14 @@
+{
+  "require": {
+    "symfony/routing": "^5.1",
+    "symfony/http-foundation": "^5.1",
+    "symfony/yaml": "^5.1",
+    "symfony/config": "^5.1",
+    "symfony/debug": "^4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}

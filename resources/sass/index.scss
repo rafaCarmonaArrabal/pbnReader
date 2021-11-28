@@ -1,0 +1,25 @@
+body {
+  min-height: 100vh;
+}
+
+.animation {
+  &:hover {
+    transition: all ease-in 0.4s;
+  }
+}
+
+#table {
+  @media(min-width: $minWidthMd) {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      width: 0 !important
+    }
+  }
+  @media (min-width: $minWidthMd) {
+    max-height: 600px;
+  }
+  @media (min-width: $minWidthLg) {
+    max-height: 800px;
+  }
+}

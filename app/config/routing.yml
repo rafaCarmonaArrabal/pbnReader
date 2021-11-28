@@ -1,0 +1,42 @@
+home:
+  path: /
+  defaults:
+    _file: HomeController.php
+    _method: index
+
+pbn:
+  path: /pbn
+  defaults:
+    _file: ReadPbnController.php
+    _method: index
+
+post_pbn:
+  path: /post/pbn
+  defaults:
+    _file: ReadPbnController.php
+    _method: post
+
+results:
+  path: /resultados
+  defaults:
+    _file: ResultController.php
+    _method: index
+
+result:
+  path: /resultado/{id}
+  defaults:
+    _file: ResultController.php
+    _method: show
+    _args: [id]
+  requirements:
+    id: ^\d+$
+
+scorecard:
+  path: [/resultado/{tournament_id}/scorecard/{pair_id}, /resultado/{tournament_id}/scorecard]
+  defaults:
+    _file: ScorecardController.php
+    _method: show
+    _args: [tournament_id, pair_id]
+  requirements:
+    tournament_id: ^\d+$
+    pair_id: ^\d*$
